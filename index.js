@@ -1,10 +1,8 @@
 // Create an empty scene
 let scene = new THREE.Scene();
-const axesHelper = new THREE.AxesHelper( 1000 );
-scene.add( axesHelper );
 
 // Create a basic perspective camera
-let camera = new THREE.PerspectiveCamera(95, window.innerWidth / window.innerHeight, 1, 10000);
+let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.08, 50000);
 camera.position.x = 200;
 
 
@@ -30,13 +28,13 @@ dotGeometry.vertices.push(new THREE.Vector3(0, 0, 0));
 colors.push(new THREE.Color('#f0f'));
 
 let rawFile = new XMLHttpRequest();
-rawFile.open('GET', 'galaxydata.txt', false);
+rawFile.open('GET', 'exoplanetdata.txt', false);
 rawFile.onreadystatechange = function () {
     if (rawFile.readyState === 4) {
         if (rawFile.status === 200 || rawFile.status == 0) {
             let data = rawFile.responseText.split('\n');
 
-            for (let i = 0; i < 4226; i++) {
+            for (let i = 0; i < 5637; i++) {
                 let parts = data[i].split(' ');
                 dotGeometry.vertices.push(
                     new THREE.Vector3(parseFloat(parts[0]), parseFloat(parts[1]), parseFloat(parts[2]))
@@ -50,7 +48,7 @@ rawFile.send(null);
 
 let names;
 rawFile = new XMLHttpRequest();
-rawFile.open('GET', 'galaxyname.txt', false);
+rawFile.open('GET', 'exoplanetname.txt', false);
 rawFile.onreadystatechange = function () {
     if (rawFile.readyState === 4) {
         if (rawFile.status === 200 || rawFile.status == 0) {
@@ -63,10 +61,11 @@ rawFile.send(null);
 
 dotGeometry.colors = colors;
 
-let size = 1;
+let size = 0.25;
 let dotMaterial = new THREE.PointsMaterial({
     size: size,
-    vertexColors: THREE.VertexColors
+    vertexColors: THREE.VertexColors,
+    blending: THREE.AdditiveBlending,
 });
 let dots = new THREE.Points(dotGeometry, dotMaterial);
 scene.add(dots);
@@ -89,6 +88,8 @@ window.addEventListener('mousemove', onDocumentMouseMove, false);
 window.addEventListener('click', onDocumentMouseClick, false);
 window.addEventListener('contextmenu', onDocumentMouseRightClick, false);
 window.addEventListener('wheel', onDocumentMouseWheel, true);
+
+var canHide = document.getElementsByClassName('canHide');
 
 function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -122,7 +123,7 @@ function searchfunc() {
         updateCenterGUI();
     } else {
         let found = false;
-        for (let i = 0; i < 5637; i++) {
+        for (let i = 0; i < 5638; i++) {
             let name = names[i];
             if (name.indexOf(',') > -1) {
                 let namearr = name.split(',');
@@ -134,8 +135,7 @@ function searchfunc() {
                 }
                 if (found) {
                     if (centerindex !== i)
-                        dots.geometry.colors[centerindex] =
-                            centerindex === 0 ? new THREE.Color('#f0f') : new THREE.Color('#fff');
+                        dots.geometry.colors[centerindex] = centerindex === 0 ? new THREE.Color('#f0f') : new THREE.Color('#fff');
                     centerindex = i;
 
                     updateExoplanetPage(i);
@@ -174,7 +174,9 @@ function onDocumentMouseMove(event) {
         dots.geometry.colorsNeedUpdate = true;
         selectedObject = idx;
     }
+
 }
+
 
 function onDocumentMouseClick(event) {
     let intersects = getIntersects(event.layerX, event.layerY);
@@ -315,3 +317,5 @@ function updateCenterGUI() {
     centerdist.innerHTML = centerdistval.toFixed(2);
     centerdistly.innerHTML = (3.262 * centerdistval).toFixed(2);
 }
+
+

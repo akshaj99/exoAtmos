@@ -55,8 +55,8 @@
 </head>
 
 <body>
-	<div style="position: absolute; color: rgb(255, 255, 255); top: 0px; right: 0px;">
-		<h2>5637 Exoplanets &lt; 8000 pc from Earth</h2>
+	<div class="canHide" style="position: absolute; color: rgb(255, 255, 255); top: 0px; right: 0px;">
+		<h2>5637 Exoplanets &lt; 9000 Mpc from Earth</h2>
 		<h3>Tools</h3>
 		Point at a exoplanet: <b>Name, CDS, Simbad, Aladin, NED</b><br>
 		Mouse scroll or Pinch zoom: <b>Move to/from centered exoplanet</b><br>
@@ -67,20 +67,20 @@
 		Point at a colored exoplanet (except last colored): <b>Turn it back to white</b><br>
 		Earth: <b>Always <span style="color:#f0f;">magenta</span></b>
 	</div>
-	<div style="position: absolute; color: rgb(255, 255, 255); bottom: 10px; left: 0px;">
+	<div class="canHide" style="position: absolute; color: rgb(255, 255, 255); bottom: 10px; left: 0px;">
 		<h1>Exoplanet Search</h1><input type="text" placeholder="Name / Catalog Number" id="srchkey"><button type="button"
 			onclick="searchfunc();" id="srchbtn">Search</button><br>
 
 		<br>
-		<!--<h3><a href="https://github.com/RiteshSingh/galaxies/blob/master/exoplanetname.txt" target="_blank">List of all
-				4673 galaxies</a></h3>-->
+		<h3><a href="https://github.com/akshaj99/exoAtmos/blob/main/galaxyname.txt" target="_blank">List of all
+				5637 exoplanets</a></h3>
 	</div>
-	<div style="position: absolute; color: rgb(255, 255, 255); top: 0px; left: 0px;">
+	<div class="canHide" style="position: absolute; color: rgb(255, 255, 255); top: 0px; left: 0px;">
 		<h1 id="exoplanetName2">Earth</h1>
 		<p id="exoplanetNames">Earth</p>
 		<p style="margin-bottom: 1em;" id="exoplanetDist">0.0 Mpc (0.0 Mly)</p>
 
-		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/ESO-VLT-Laser-phot-33a-07.jpg/1280px-ESO-VLT-Laser-phot-33a-07.jpg"
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/City_Lights_of_Asia_and_Middle_East_2016.png/640px-City_Lights_of_Asia_and_Middle_East_2016.jpg"
 			width="200" id="image" style="display:block;" />
 		<div id="aladin-lite-div" style="width:300px;height:300px; display:none"></div><br>
 
@@ -89,11 +89,11 @@
 		<a href="" target="_blank" style="display:none;" id="aladin">Aladin</a>
 		<a href="" target="_blank" style="display:none;" id="ned">NED</a>
 	</div>
-	<div style="position: absolute; color: rgb(255, 255, 255); bottom: 0px; right: 0px;">
+	<div class="canHide" style="position: absolute; color: rgb(255, 255, 255); bottom: 0px; right: 0px;">
 		<p><span id="exoplanetName" style="float: left;">Earth</span> centered and colored <b><span id="exoplanetColor"
 					style="color: #f0f">magenta</span></b></p>
-		<!--<h3>Distance: <span id="centerdist">200</span> Mpc (<span id="centerdistly">652.31</span> million light-years)
-		</h3>-->
+		<h3>Distance: <span id="centerdist">200</span> Mpc (<span id="centerdistly">652.31</span> million light-years)
+		</h3>
 	</div>
 
 
