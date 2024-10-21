@@ -3,7 +3,7 @@
 <p></p>
 
 
-### Tools
+### How To Use
 
 Download repository.
 Ensure that you have npm installed. 
