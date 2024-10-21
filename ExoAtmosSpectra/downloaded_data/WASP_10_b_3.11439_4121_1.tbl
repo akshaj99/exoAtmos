@@ -1,0 +1,12 @@
+\PL_NAME='WASP-10 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Infrared Array Camera (IRAC)'
+\FACILITY='Spitzer Space Telescope satellite'
+\NOTE='Table 3'
+\REFERENCE='Kammer et al. 2015'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            3.6      null         0.1           0.011          -0.011              0     1152.0           34.0          -36.0             0     null         null         null 
+            4.5      null       0.146           0.016          -0.016              0     1086.0           38.0          -39.0             0     null         null         null 

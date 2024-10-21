@@ -1,0 +1,13 @@
+\PL_NAME='WASP-8 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Infrared Array Camera (IRAC)'
+\FACILITY='Spitzer Space Telescope satellite'
+\NOTE='None'
+\REFERENCE='Cubillos et al. 2013'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            3.6      null       0.113           0.018          -0.018              0     1552.0           null           null             0     null         null         null 
+            4.5      null      0.0692          0.0068         -0.0068              0     1131.0           null           null             0     null         null         null 
+            8.0      null       0.093           0.023          -0.023              0      938.0           null           null             0     null         null         null 

@@ -1,0 +1,12 @@
+\PL_NAME='WASP-43 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='GROND'
+\FACILITY='European Southern Observatory (ESO)/Max Planck Gesellschaft (MPG) 2.2m Telescope at La Silla Observatory'
+\NOTE='eclipse depth taken from Abstract'
+\REFERENCE='Chen et al. 2014'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          0.763      null       0.037           0.023          -0.021              0     2225.0          139.0         -225.0             0     null         null         null 
+           2.19      0.39       0.197           0.042          -0.042              0     1878.0          108.0         -116.0             0     null         null         null 

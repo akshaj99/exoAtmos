@@ -1,0 +1,12 @@
+\PL_NAME='HAT-P-3 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Infrared Array Camera (IRAC)'
+\FACILITY='Spitzer Space Telescope satellite'
+\NOTE='Table 5'
+\REFERENCE='Todorov et al. 2013'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            3.6      0.75       0.112           0.015           -0.03              0     1575.0           75.0         -162.0             0     null         null         null 
+            4.5     1.015       0.094           0.016          -0.009              0     1268.0           77.0          -45.0             0     null         null         null 

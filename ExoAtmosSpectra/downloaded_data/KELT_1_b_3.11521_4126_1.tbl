@@ -1,0 +1,15 @@
+\PL_NAME='KELT-1 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='LUCI1'
+\FACILITY='LBT Consortium Large Binocular Telescope (LBT) at Mount Graham International Observatory'
+\NOTE='Table 3'
+\REFERENCE='Beatty et al. 2017'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+           1.57      0.04      0.1285          0.0131         -0.0131              0       null           null           null             0     null         null         null 
+           1.61      0.04      0.1461          0.0128         -0.0128              0       null           null           null             0     null         null         null 
+           1.65      0.04      0.1587           0.013          -0.013              0       null           null           null             0     null         null         null 
+           1.69      0.04      0.1532          0.0137         -0.0137              0       null           null           null             0     null         null         null 
+           1.73      0.04      0.1623          0.0158         -0.0158              0       null           null           null             0     null         null         null 

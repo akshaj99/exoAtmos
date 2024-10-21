@@ -1,0 +1,11 @@
+\PL_NAME='HD 209458 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Infrared Array Camera (IRAC)'
+\FACILITY='Spitzer Space Telescope satellite'
+\NOTE='Table 4, 2010 Jan 21'
+\REFERENCE='Evans et al. 2015'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            4.5      null       0.133           0.011          -0.011              0     1426.0           47.0          -48.0             0     null         null         null 

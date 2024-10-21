@@ -1,0 +1,11 @@
+\PL_NAME='WASP-43 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='IRIS2'
+\FACILITY='Australian National University (ANU) 3.9m Anglo-Australian Telescope (AAT) at Siding Spring Observatory (SSO)'
+\NOTE='Table 3'
+\REFERENCE='Zhou et al. 2014'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          2.144     0.324       0.181           0.027          -0.027              0     1743.0           67.0          -67.0             0     null         null         null 

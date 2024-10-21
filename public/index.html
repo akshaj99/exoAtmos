@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width,initial-scale=1">
+                <title>3D Distribution of Exoplanets &lt; 10000 pc from Earth</title>
+                <style>
+                        body, html {
+                            margin: 0;
+                            padding: 0;
+                            font-family: Arial, sans-serif;
+                            background-color: #000;
+                            color: #fff;
+                            height: 100%;
+                            overflow: hidden;
+                        }
+                        #search-container {
+                            position: absolute;
+                            top: 10px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            z-index: 1000;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            padding: 10px;
+                            border-radius: 5px;
+                        }
+                        #search-container input {
+                            background-color: rgba(255, 255, 255, 0.1);
+                            border: 1px solid rgba(255, 255, 255, 0.3);
+                            color: #fff;
+                            padding: 5px 10px;
+                            border-radius: 3px;
+                        }
+                        #search-container button {
+                            background-color: #4CAF50;
+                            border: none;
+                            color: white;
+                            padding: 5px 10px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 14px;
+                            margin: 4px 2px;
+                            cursor: pointer;
+                            border-radius: 3px;
+                        }
+                        .canHide {
+                            background-color: rgba(0, 0, 0, 0.7);
+                            padding: 15px;
+                            border-radius: 5px;
+                            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+                        }
+                        #exoplanetName2 {
+                            font-size: 24px;
+                            margin-bottom: 10px;
+                        }
+                        #image, #aladin-lite-div {
+                            border: 1px solid rgba(255, 255, 255, 0.3);
+                            border-radius: 5px;
+                            margin-top: 10px;
+                        }
+                        #cds, #simbad, #aladin, #ned {
+                            color: #4CAF50;
+                            text-decoration: none;
+                            margin-right: 10px;
+                        }
+                        #cds:hover, #simbad:hover, #aladin:hover, #ned:hover {
+                            text-decoration: underline;
+                        }
+                        #habitable-zone-container {
+                            background-color: rgba(0, 0, 0, 0.7);
+                            padding: 10px;
+                            border-radius: 5px;
+                        }
+                        #habitable-zone-container label {
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                        }
+                        #habitable-zone-checkbox {
+                            margin-right: 5px;
+                        }
+                        #exoplanetName {
+                            font-size: 20px;
+                            margin-bottom: 5px;
+                        }
+                        #exoplanetColor {
+                            font-weight: bold;
+                        }
+                    </style>
+                <link rel="stylesheet" href="https://aladin.u-strasbg.fr/AladinLite/api/v2/latest/aladin.min.css"/>
+                <script src="https://code.jquery.com/jquery-1.12.1.min.js" charset="utf-8"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.0.0/chartjs-plugin-zoom.min.js"></script>    
+        </head>
+        <body>
+                <div id="search-container">
+                        <input type="text" id="srchkey" placeholder="Search for a star or planet">
+                        <button id="search-button">Search</button>
+                </div>
+                <div class="canHide" style="position: absolute; color: white; top: 0; left: 0;">
+                        <h1 id="exoplanetName2"></h1>
+                        <p id="exoplanetNames"></p>
+                        <p style="margin-bottom: 1em;" id="exoplanetDist">Currently Centered 0.0 Pc (0.0 Ly) from the Sun</p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/City_Lights_of_Asia_and_Middle_East_2016.png/640px-City_Lights_of_Asia_and_Middle_East_2016.jpg" width="200" id="image" style="display:none;"/>
+                        <div id="aladin-lite-div" style="width:300px;height:300px; display:none;"></div>
+                        <br>
+                        <a href="" target="_blank" style="display:none;" id="cds">CDS</a> 
+                        <a href="" target="_blank" style="display:none;" id="simbad">Simbad</a> 
+                        <a href="" target="_blank" style="display:none;" id="aladin">Aladin</a> 
+                        <a href="" target="_blank" style="display:none;" id="ned">NED</a>
+                </div>
+                <div id="habitable-zone-container" style="position: absolute; bottom: 50px; left: 10px; display: none; color:aqua">
+                        <label>
+                        <input type="checkbox" id="habitable-zone-checkbox" checked>
+                        Show Habitable Zone
+                        </label>
+                </div>
+                <div class="canHide" style="position: absolute; color: white; bottom: 0; right: 0;">
+                        <p><span id="exoplanetName">Sun</span> centered and colored <b><span id="exoplanetColor" style="color: #f0f;">magenta</span></b></p>
+                        <h3>Distance: <span id="centerdist">200</span> Pc (<span id="centerdistly">652.31</span> Light-years)</h3>
+                </div>
+                <script src="https://aladin.u-strasbg.fr/AladinLite/api/v2/latest/aladin.min.js" charset="utf-8"></script>
+        </body>
+</html>

@@ -1,0 +1,11 @@
+\PL_NAME='KELT-20 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='TESS CCD Array'
+\FACILITY='Transiting Exoplanet Survey Satellite'
+\NOTE='Table 1'
+\REFERENCE='Fu et al. 2022'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|    char|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            0.8       0.2      0.0139          0.0008         -0.0008              0       null           null           null             0     null         null         null 

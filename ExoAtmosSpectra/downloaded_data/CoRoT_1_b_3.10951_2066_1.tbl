@@ -1,0 +1,11 @@
+\PL_NAME='CoRoT-1 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Near-Infrared Camera & Fabry-Perot Spectrometer (NIC-FPS)'
+\FACILITY='Astrophysical Research Consortium (ARC) 3.5m Telescope At Apache Point Observatory (APO)'
+\NOTE='Table 3'
+\REFERENCE='Rogers et al. 2009'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          2.147      null       0.336           0.042          -0.042              0     2460.0           80.0         -160.0             0     null         null         null 

@@ -1,0 +1,11 @@
+\PL_NAME='WASP-3 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='High Resolution Imager (HRI)'
+\FACILITY='Deep Impact spacecraft'
+\NOTE='Table 6'
+\REFERENCE='Christiansen et al. 2011'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+           0.65      null       0.023           0.044          -0.044              0       null           null           null             0     null         null         null 

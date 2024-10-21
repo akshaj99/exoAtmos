@@ -1,0 +1,11 @@
+\PL_NAME='WASP-12 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Seaver Prototype Imaging camera (SPICam)'
+\FACILITY='Astrophysical Research Consortium (ARC) 3.5m Telescope At Apache Point Observatory (APO)'
+\NOTE='text, Section 3, 2nd paragraph'
+\REFERENCE='L&oacute;pez-Morales et al. 2010'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            0.9      null       0.082           0.015          -0.015              0     3028.0           99.0         -110.0             0     null         null         null 

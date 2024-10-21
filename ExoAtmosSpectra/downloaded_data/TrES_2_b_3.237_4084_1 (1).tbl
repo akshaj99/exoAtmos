@@ -1,0 +1,14 @@
+\PL_NAME='TrES-2 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Infrared Array Camera (IRAC)'
+\FACILITY='Spitzer Space Telescope satellite'
+\NOTE='Table 2'
+\REFERENCE='O&#39;Donovan et al. 2010'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            3.6      null       0.127           0.021          -0.021              0       null           null           null             0     null         null         null 
+            4.5      null        0.23           0.024          -0.024              0       null           null           null             0     null         null         null 
+            5.8      null       0.199           0.054          -0.054              0       null           null           null             0     null         null         null 
+            8.0      null       0.359            0.06           -0.06              0       null           null           null             0     null         null         null 

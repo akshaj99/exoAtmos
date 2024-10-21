@@ -1,0 +1,28 @@
+\PL_NAME='HD 189733 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Near Infrared Camera and Multi-Object Spectrometer (NICMOS)'
+\FACILITY='Hubble Space Telescope satellite'
+\NOTE='Table 1'
+\REFERENCE='Swain et al. 2009'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          1.476      null     -0.0089           0.008          -0.008              0       null           null           null             0     null         null         null 
+          1.525      null      -0.019           0.007          -0.007              0       null           null           null             0     null         null         null 
+          1.584      null      0.0021           0.006          -0.006              0       null           null           null             0     null         null         null 
+           1.64      null      0.0177           0.007          -0.007              0       null           null           null             0     null         null         null 
+          1.698      null      0.0452           0.007          -0.007              0       null           null           null             0     null         null         null 
+          1.755      null      0.0532           0.006          -0.006              0       null           null           null             0     null         null         null 
+          1.814      null      0.0331           0.006          -0.006              0       null           null           null             0     null         null         null 
+          1.869      null      0.0389           0.006          -0.006              0       null           null           null             0     null         null         null 
+          1.929      null      0.0128           0.007          -0.007              0       null           null           null             0     null         null         null 
+          1.986      null       0.003           0.007          -0.007              0       null           null           null             0     null         null         null 
+          2.044      null      0.0122           0.006          -0.006              0       null           null           null             0     null         null         null 
+          2.101      null       0.025           0.007          -0.007              0       null           null           null             0     null         null         null 
+          2.159      null      0.0452           0.007          -0.007              0       null           null           null             0     null         null         null 
+          2.216      null      0.0714           0.008          -0.008              0       null           null           null             0     null         null         null 
+          2.274      null       0.086           0.008          -0.008              0       null           null           null             0     null         null         null 
+          2.332      null      0.0592           0.008          -0.008              0       null           null           null             0     null         null         null 
+          2.389      null      0.0633           0.009          -0.009              0       null           null           null             0     null         null         null 
+          2.446      null      0.0491           0.009          -0.009              0       null           null           null             0     null         null         null 

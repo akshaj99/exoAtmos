@@ -1,0 +1,11 @@
+\PL_NAME='HD 209458 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Multiband Imaging Photometer (MIPS)'
+\FACILITY='Spitzer Space Telescope satellite'
+\NOTE='B. temperature from abstract/text, not Table 5'
+\REFERENCE='Crossfield et al. 2012'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+           24.0      null       0.338           0.026          -0.026              0     1320.0           80.0          -80.0             0     null         null         null 

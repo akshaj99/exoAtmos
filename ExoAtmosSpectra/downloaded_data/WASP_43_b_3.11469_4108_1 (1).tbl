@@ -1,0 +1,12 @@
+\PL_NAME='WASP-43 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='WIRCam'
+\FACILITY='3.58m Canada-France-Hawaii Telescope (CFHT) at Mauna Kea Observatory'
+\NOTE='eclipse depth taken from Abstract'
+\REFERENCE='Wang et al. 2013'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          1.631     0.289       0.103           0.017          -0.017              0     1850.0           null           null             0     null         null         null 
+          2.146     0.325       0.194           0.029          -0.029              0     1850.0           null           null             0     null         null         null 

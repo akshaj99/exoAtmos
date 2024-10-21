@@ -1,0 +1,25 @@
+\PL_NAME='WASP-43 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Wide Field Camera 3'
+\FACILITY='Hubble Space Telescope'
+\NOTE='Table 1'
+\REFERENCE='Kreidberg et al. 2014'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+         1.1425     0.035      0.0367          0.0045         -0.0045              0       null           null           null             0     null         null         null 
+         1.1775     0.035      0.0431          0.0036         -0.0036              0       null           null           null             0     null         null         null 
+         1.2125     0.035      0.0414          0.0038         -0.0038              0       null           null           null             0     null         null         null 
+         1.2475     0.035      0.0482          0.0036         -0.0036              0       null           null           null             0     null         null         null 
+         1.2825     0.035       0.046          0.0037         -0.0037              0       null           null           null             0     null         null         null 
+         1.3175     0.035      0.0473          0.0033         -0.0033              0       null           null           null             0     null         null         null 
+         1.3525     0.035      0.0353          0.0034         -0.0034              0       null           null           null             0     null         null         null 
+         1.3875     0.035      0.0313           0.003          -0.003              0       null           null           null             0     null         null         null 
+         1.4225     0.035       0.032          0.0036         -0.0036              0       null           null           null             0     null         null         null 
+         1.4575     0.035      0.0394          0.0036         -0.0036              0       null           null           null             0     null         null         null 
+         1.4925     0.035      0.0439          0.0033         -0.0033              0       null           null           null             0     null         null         null 
+         1.5275     0.035      0.0458          0.0035         -0.0035              0       null           null           null             0     null         null         null 
+         1.5625     0.035      0.0595          0.0036         -0.0036              0       null           null           null             0     null         null         null 
+         1.5975     0.035      0.0614          0.0037         -0.0037              0       null           null           null             0     null         null         null 
+         1.6325     0.035      0.0732          0.0042         -0.0042              0       null           null           null             0     null         null         null 

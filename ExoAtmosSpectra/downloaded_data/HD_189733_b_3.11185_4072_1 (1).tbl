@@ -1,0 +1,11 @@
+\PL_NAME='HD 189733 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Infrared Spectrograph (IRS)'
+\FACILITY='Spitzer Space Telescope satellite'
+\NOTE='eclipse depth taken from Abstract'
+\REFERENCE='Deming et al. 2006'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+           16.0      null       0.551            0.03           -0.03              0     1117.0           42.0          -42.0             0     null         null         null 

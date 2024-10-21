@@ -1,0 +1,13 @@
+\PL_NAME='WASP-80 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Wide Field Camera 3'
+\FACILITY='Hubble Space Telescope satellite'
+\NOTE='Figure 1'
+\REFERENCE='Jacobs et al. 2023'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|    char|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          1.209      0.18     0.00324         0.00197        -0.00192              0       null           null           null             0     null         null         null 
+          1.391     0.182     0.00136         0.00155        -0.00155              0       null           null           null             0     null         null         null 
+          1.568     0.173     0.00419         0.00149        -0.00147              0       null           null           null             0     null         null         null 

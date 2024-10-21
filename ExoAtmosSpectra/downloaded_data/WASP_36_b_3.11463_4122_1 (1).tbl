@@ -1,0 +1,11 @@
+\PL_NAME='WASP-36 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='IRIS2'
+\FACILITY='Anglo Australian Telescope'
+\NOTE='Table 2'
+\REFERENCE='Zhou et al. 2015'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          2.159     0.262        0.13            0.04           -0.04              0     1900.0          100.0         -200.0             0     null         null         null 

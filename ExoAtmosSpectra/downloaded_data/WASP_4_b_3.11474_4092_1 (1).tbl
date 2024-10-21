@@ -1,0 +1,11 @@
+\PL_NAME='WASP-4 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='ISAAC'
+\FACILITY='European Southern Observatory (ESO) 8.2m Very Large Telescope (VLT) Melipal (UT3) at Paranal Observatory'
+\NOTE='None'
+\REFERENCE='C&aacute;ceres et al. 2011'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            2.2      null       0.185           0.014          -0.013              0     1995.0           40.0          -40.0             0     null         null         null 

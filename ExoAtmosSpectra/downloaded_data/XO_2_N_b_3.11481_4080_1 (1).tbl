@@ -1,0 +1,14 @@
+\PL_NAME='XO-2 N b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Infrared Array Camera (IRAC)'
+\FACILITY='Spitzer Space Telescope satellite'
+\NOTE='Table 1'
+\REFERENCE='Machalek et al. 2009'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            3.6      null       0.081           0.017          -0.017              0       null           null           null             0     null         null         null 
+            4.5      null       0.098            0.02           -0.02              0       null           null           null             0     null         null         null 
+            5.8      null       0.167           0.036          -0.036              0       null           null           null             0     null         null         null 
+            8.0      null       0.133           0.049          -0.049              0       null           null           null             0     null         null         null 

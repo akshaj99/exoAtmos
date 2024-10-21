@@ -1,0 +1,30 @@
+\PL_NAME='WASP-12 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='SpeX'
+\FACILITY='Infrared Telescope Facility'
+\NOTE='Table 2'
+\REFERENCE='Crossfield et al. 2012'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+         1.5375     0.025       0.034           0.155          -0.155              0       null           null           null             0     null         null         null 
+         1.5625     0.025       0.206            0.11           -0.11              0       null           null           null             0     null         null         null 
+         1.5875     0.025       0.204           0.086          -0.086              0       null           null           null             0     null         null         null 
+         1.6125     0.025       0.133           0.135          -0.135              0       null           null           null             0     null         null         null 
+         1.6375     0.025       0.213            0.11           -0.11              0       null           null           null             0     null         null         null 
+         1.6625     0.025       0.153           0.113          -0.113              0       null           null           null             0     null         null         null 
+         1.6875     0.025       0.195           0.117          -0.117              0       null           null           null             0     null         null         null 
+         1.7125     0.025       0.143           0.116          -0.116              0       null           null           null             0     null         null         null 
+         1.7375     0.025       0.165           0.107          -0.107              0       null           null           null             0     null         null         null 
+         2.0875     0.025       0.135            0.09           -0.09              0       null           null           null             0     null         null         null 
+         2.1125     0.025       0.308           0.046          -0.046              0       null           null           null             0     null         null         null 
+         2.1375     0.025       0.202           0.121          -0.121              0       null           null           null             0     null         null         null 
+         2.1625     0.025       0.399           0.103          -0.103              0       null           null           null             0     null         null         null 
+         2.1875     0.025       0.271           0.062          -0.062              0       null           null           null             0     null         null         null 
+         2.2125     0.025       0.286           0.073          -0.073              0       null           null           null             0     null         null         null 
+         2.2375     0.025       0.314           0.065          -0.065              0       null           null           null             0     null         null         null 
+         2.2625     0.025       0.379           0.056          -0.056              0       null           null           null             0     null         null         null 
+         2.2875     0.025       0.368           0.067          -0.067              0       null           null           null             0     null         null         null 
+         2.3125     0.025       0.348           0.077          -0.077              0       null           null           null             0     null         null         null 
+         2.3375     0.025       0.248           0.087          -0.087              0       null           null           null             0     null         null         null 

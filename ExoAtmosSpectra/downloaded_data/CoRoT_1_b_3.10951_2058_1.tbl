@@ -1,0 +1,11 @@
+\PL_NAME='CoRoT-1 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='High Acuity Wide-field K-band Imager (HAWK-I)'
+\FACILITY='European Southern Observatory (ESO) 8.2m Very Large Telescope (VLT) Yepun at Paranal Observatory'
+\NOTE='Table 1'
+\REFERENCE='Gillon et al. 2009'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          2.095      0.02       0.278           0.043          -0.066              0       null           null           null             0     null         null         null 

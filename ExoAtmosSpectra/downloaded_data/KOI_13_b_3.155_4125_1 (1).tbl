@@ -1,0 +1,25 @@
+\PL_NAME='KOI-13 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Wide Field Camera 3'
+\FACILITY='Hubble Space Telescope satellite'
+\NOTE='Table 4'
+\REFERENCE='Beatty et al. 2017'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          1.142      null      0.0662          0.0071         -0.0071              0       null           null           null             0     null         null         null 
+          1.178      null      0.0507          0.0065         -0.0065              0       null           null           null             0     null         null         null 
+          1.213      null      0.0814          0.0065         -0.0065              0       null           null           null             0     null         null         null 
+          1.248      null      0.0728          0.0066         -0.0066              0       null           null           null             0     null         null         null 
+          1.283      null      0.0798          0.0066         -0.0066              0       null           null           null             0     null         null         null 
+          1.318      null      0.0838           0.007          -0.007              0       null           null           null             0     null         null         null 
+          1.352      null      0.0684          0.0067         -0.0067              0       null           null           null             0     null         null         null 
+          1.388      null       0.064          0.0066         -0.0066              0       null           null           null             0     null         null         null 
+          1.422      null      0.0767          0.0071         -0.0071              0       null           null           null             0     null         null         null 
+          1.458      null      0.0684          0.0078         -0.0078              0       null           null           null             0     null         null         null 
+          1.493      null      0.0755          0.0072         -0.0072              0       null           null           null             0     null         null         null 
+          1.528      null      0.0688          0.0075         -0.0075              0       null           null           null             0     null         null         null 
+          1.562      null       0.085          0.0071         -0.0071              0       null           null           null             0     null         null         null 
+          1.598      null      0.0994          0.0078         -0.0078              0       null           null           null             0     null         null         null 
+          1.632      null      0.1094          0.0078         -0.0078              0       null           null           null             0     null         null         null 

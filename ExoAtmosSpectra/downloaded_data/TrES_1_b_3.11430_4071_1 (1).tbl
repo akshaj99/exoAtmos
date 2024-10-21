@@ -1,0 +1,12 @@
+\PL_NAME='TrES-1 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Infrared Array Camera (IRAC)'
+\FACILITY='Spitzer Space Telescope satellite'
+\NOTE='Bright. temp from text, Section 4, 2nd para.'
+\REFERENCE='Charbonneau et al. 2005'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            4.5      null       0.066           0.013          -0.013              0     1010.0           60.0          -60.0             0     null         null         null 
+            8.0      null       0.225           0.036          -0.036              0     1230.0          110.0         -110.0             0     null         null         null 

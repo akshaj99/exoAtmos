@@ -1,0 +1,21 @@
+\PL_NAME='WASP-33 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Wide Field Camera 3'
+\FACILITY='Hubble Space Telescope satellite'
+\NOTE='Figure 2'
+\REFERENCE='Changeat et al. 2022'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|    char|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          1.155     0.044       0.119          0.0027         -0.0027              0       null           null           null             0     null         null         null 
+          1.199     0.044       0.121          0.0033         -0.0033              0       null           null           null             0     null         null         null 
+          1.243     0.044       0.098          0.0026         -0.0026              0       null           null           null             0     null         null         null 
+          1.279     0.028       0.115          0.0039         -0.0039              0       null           null           null             0     null         null         null 
+          1.318      0.05       0.112          0.0026         -0.0026              0       null           null           null             0     null         null         null 
+          1.366     0.046       0.116          0.0016         -0.0016              0       null           null           null             0     null         null         null 
+          1.414      0.05       0.122          0.0021         -0.0021              0       null           null           null             0     null         null         null 
+          1.462     0.046       0.125           0.002          -0.002              0       null           null           null             0     null         null         null 
+           1.51      0.05       0.125          0.0021         -0.0021              0       null           null           null             0     null         null         null 
+          1.558     0.046        0.12          0.0021         -0.0021              0       null           null           null             0     null         null         null 
+          1.606      0.05       0.122          0.0027         -0.0027              0       null           null           null             0     null         null         null 

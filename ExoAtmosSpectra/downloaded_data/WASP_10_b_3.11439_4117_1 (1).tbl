@@ -1,0 +1,11 @@
+\PL_NAME='WASP-10 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='OMEGA2000'
+\FACILITY='Max Planck Institute for Astronomy and Institute of Astrophysics of Andalusia (CSIC) 3.5m Telescope at Calar Alto Observatory'
+\NOTE='eclipse depth taken from Abstract'
+\REFERENCE='Cruz et al. 2015'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          2.159     0.262       0.137           0.013          -0.019              0       null           null           null             0     null         null         null 

@@ -1,0 +1,11 @@
+\PL_NAME='TrES-3 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Wide-field Infrared Camera (WIRCam)'
+\FACILITY='3.58m Canada-France-Hawaii Telescope (CFHT) at Mauna Kea Observatory'
+\NOTE='Table 1, MCMC Ks-band Solution'
+\REFERENCE='Croll et al. 2010'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+          2.146      null       0.133           0.018          -0.016              0     1731.0           56.0          -60.0             0     null         null         null 

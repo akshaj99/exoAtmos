@@ -1,0 +1,14 @@
+\PL_NAME='TrES-3 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Infrared Array Camera (IRAC)'
+\FACILITY='Spitzer Space Telescope satellite'
+\NOTE='Figure 2'
+\REFERENCE='Changeat et al. 2022'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|    char|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            3.6      null       0.356           0.035          -0.035              0       null           null           null             0     null         null         null 
+            4.5      null       0.372           0.054          -0.054              0       null           null           null             0     null         null         null 
+            5.8      null       0.449           0.097          -0.097              0       null           null           null             0     null         null         null 
+            8.0      null       0.475           0.046          -0.046              0       null           null           null             0     null         null         null 

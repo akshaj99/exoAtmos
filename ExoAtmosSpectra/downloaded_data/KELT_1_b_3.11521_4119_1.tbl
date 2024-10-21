@@ -1,0 +1,11 @@
+\PL_NAME='KELT-1 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='WIRCam'
+\FACILITY='3.58m Canada-France-Hawaii Telescope (CFHT) at Mauna Kea Observatory'
+\NOTE='Table 5, KELT-1 Ks band, Actual Eclipse Depth'
+\REFERENCE='Croll et al. 2015'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|  double|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+           2.19      null        0.16           0.018           -0.02              0       null           null           null             0     null         null         null 

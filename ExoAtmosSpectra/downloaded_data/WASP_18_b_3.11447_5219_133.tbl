@@ -1,0 +1,14 @@
+\PL_NAME='WASP-18 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Infrared Array Camera (IRAC)'
+\FACILITY='Spitzer Space Telescope satellite'
+\NOTE='Figure 2'
+\REFERENCE='Changeat et al. 2022'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          long|    double|        double|        double|         long|    char|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+            3.6      null       0.302           0.015          -0.015              0       null           null           null             0     null         null         null 
+            4.5      null       0.385           0.017          -0.017              0       null           null           null             0     null         null         null 
+            5.8      null        0.37            0.03           -0.03              0       null           null           null             0     null         null         null 
+            8.0      null        0.41            0.02           -0.02              0       null           null           null             0     null         null         null 

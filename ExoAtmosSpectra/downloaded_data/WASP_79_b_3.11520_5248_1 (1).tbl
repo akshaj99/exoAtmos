@@ -1,0 +1,13 @@
+\PL_NAME='WASP-79 b'
+\SPEC_TYPE='Eclipse'
+\INSTRUMENT='Wide Field Camera 3'
+\FACILITY='Hubble Space Telescope satellite'
+\NOTE='Three bins of width 0.20 um.'
+\REFERENCE='Foote et al. 2022'
+|CENTRALWAVELNG|BANDWIDTH|ESPECLIPDEP|ESPECLIPDEPERR1|ESPECLIPDEPERR2|ESPECLIPDEPLIM|ESPBRITEMP|ESPBRITEMPERR1|ESPBRITEMPERR2|ESPBRITEMPLIM|OBS_DATE|OBS_DATEERR1|OBS_DATEERR2|
+|        double|   double|     double|         double|         double|          char|    double|        double|        double|         long|    char|      double|      double|
+|       microns|  microns|          %|               |               |              |         K|              |              |             |    days|        days|        days|
+|          null|     null|       null|           null|           null|          null|      null|          null|          null|         null|    null|        null|        null|
+           1.18       0.2      0.0106          0.0087         -0.0068           null       null           null           null             0     null         null         null 
+           1.38       0.2      0.0184          0.0071          -0.007           null       null           null           null             0     null         null         null 
+           1.58       0.2      0.0188          0.0096         -0.0091           null       null           null           null             0     null         null         null 
