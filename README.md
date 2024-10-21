@@ -6,7 +6,7 @@
 ### How To Use
 
 Download repository.
-Ensure that you have npm installed. 
+Ensure that you have node.js installed. 
 Navigate to repository in terminal and run 'npm install'.
 Then run './refresh-build.sh'
 Navigate to http://localhost:3000/ in your web browser. 
