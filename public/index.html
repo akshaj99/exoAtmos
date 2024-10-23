@@ -50,7 +50,7 @@
                             border-radius: 5px;
                             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
                         }
-                        #exoplanetName2 {
+                        #exoplanetName2, #centeredDis {
                             font-size: 24px;
                             margin-bottom: 10px;
                         }
@@ -84,7 +84,7 @@
                             font-size: 20px;
                             margin-bottom: 5px;
                         }
-                        #exoplanetColor {
+                        #exoplanetColor, #exoColor {
                             font-weight: bold;
                         }
                     </style>
@@ -102,7 +102,7 @@
                 <div class="canHide" style="position: absolute; color: white; top: 0; left: 0;">
                         <h1 id="exoplanetName2"></h1>
                         <p id="exoplanetNames"></p>
-                        <p style="margin-bottom: 1em;" id="exoplanetDist">Currently Centered 0.0 Pc (0.0 Ly) from the Sun</p>
+                        <p style="margin-bottom: 1em;" id="exoplanetDist"></p>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/City_Lights_of_Asia_and_Middle_East_2016.png/640px-City_Lights_of_Asia_and_Middle_East_2016.jpg" width="200" id="image" style="display:none;"/>
                         <div id="aladin-lite-div" style="width:300px;height:300px; display:none;"></div>
                         <br>
@@ -118,8 +118,8 @@
                         </label>
                 </div>
                 <div class="canHide" style="position: absolute; color: white; bottom: 0; right: 0;">
-                        <p><span id="exoplanetName">Sun</span> centered and colored <b><span id="exoplanetColor" style="color: #f0f;">magenta</span></b></p>
-                        <h3>Distance: <span id="centerdist">200</span> Pc (<span id="centerdistly">652.31</span> Light-years)</h3>
+                        <p id="exoColor" style="font-size: 20px;" ><span id="exoplanetName">Sun</span> centered and colored <b><span id="exoplanetColor" style="color: #f0f;">magenta</span></b></p>
+                        <h3 id="centeredDis" style="font-size: 20px;" >Distance: <span id="centerdist">200</span> Pc (<span id="centerdistly">652.31</span> Light-years)</h3>
                 </div>
                 <script src="https://aladin.u-strasbg.fr/AladinLite/api/v2/latest/aladin.min.js" charset="utf-8"></script>
         </body>
