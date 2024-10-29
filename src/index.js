@@ -20,7 +20,7 @@ let mouseDownTime = 0;
 const clickThreshold = 300; // milliseconds
 let isOverSearchContainer = false;
 let currentSpectraDisplay = null;
-const VISIBILITY_THRESHOLD = 4000; // Reduced from 1000
+const VISIBILITY_THRESHOLD = 12000; // Reduced from 1000
 const GALAXY_SIZE = 40000; // Reduced from 200000
 let milkyWayMesh;
 
@@ -37,13 +37,13 @@ let names = [];
 let composer;
 let selectedObject = null;
 
-let messageEl1, labelRenderer, centerdist, centerdistly, exoplanetName, exoplanetName2, exoplanetNames, exoplanetDist, exoplanetColor, image, cdsLink, simbad, aladinLink, ned, aladinDiv;
+let messageEl1, labelRenderer, centerdist, centerdistly, exoplanetName, starName, exoplanetNames, exoplanetDist, exoplanetColor, image, cdsLink, simbad, aladinLink, ned, aladinDiv;
 
 function initializeDOMElements() {
     centerdist = document.getElementById('centerdist');
     centerdistly = document.getElementById('centerdistly');
     exoplanetName = document.getElementById('exoplanetName');
-    exoplanetName2 = document.getElementById('exoplanetName2');
+    starName = document.getElementById('starName');
     exoplanetNames = document.getElementById('exoplanetNames');
     exoplanetDist = document.getElementById('exoplanetDist');
     exoplanetColor = document.getElementById('exoplanetColor');
@@ -58,7 +58,7 @@ function initializeDOMElements() {
         centerdist: !!centerdist,
         centerdistly: !!centerdistly,
         exoplanetName: !!exoplanetName,
-        exoplanetName2: !!exoplanetName2,
+        starName: !!starName,
         exoplanetNames: !!exoplanetNames,
         exoplanetDist: !!exoplanetDist,
         exoplanetColor: !!exoplanetColor,
@@ -234,11 +234,17 @@ function addMilkyWayBackground() {
     );
 }
 
-function createPlanet(planet, index, starSize) {
+function createPlanet(planet, index, starSize, totalPlanets) {
     const planetSize = planet.pl_rade ? Math.max(0.05, planet.pl_rade * 0.009 * starSize) : 0.05 * starSize;
-    console.log(`Creating planet: ${planet.pl_name}, Size: ${planetSize}, Orbit: ${planet.pl_orbsmax}, Eccentricity: ${planet.pl_orbeccen}`);
+    console.log(`Creating planet: ${planet.pl_name}, Size: ${planetSize}, Orbit: ${planet.pl_orbsmax}, Type: ${planet.pl_type}`);
+    
     const planetGeometry = new THREE.SphereGeometry(planetSize, 32, 32);
-    const planetMaterial = new THREE.MeshPhongMaterial({ color: 0xFFFFFF });
+    const planetMaterial = new THREE.MeshPhongMaterial({ 
+        color: getPlanetColor(planet),
+        emissive: getPlanetColor(planet),
+        emissiveIntensity: 0.5,
+        shininess: 30
+    });
     const planetMesh = new THREE.Mesh(planetGeometry, planetMaterial);
     
     // Add planet data to mesh directly
@@ -247,6 +253,8 @@ function createPlanet(planet, index, starSize) {
     const scaleFactor = 10;
     const semiMajorAxis = starSize * 5 + (index + 1) * scaleFactor * (planet.pl_orbsmax || 1);
     const eccentricity = planet.pl_orbeccen || 0;
+
+    const initialAngle = (index / totalPlanets) * 2 * Math.PI + (planet.pl_orbsmax ? Math.PI * (planet.pl_orbsmax / 10) : 0);
     
     // Create elliptical orbit
     const orbitPoints = [];
@@ -258,32 +266,46 @@ function createPlanet(planet, index, starSize) {
         const z = r * Math.sin(theta);
         orbitPoints.push(new THREE.Vector3(x, 0, z));
     }
+    
     const orbitGeometry = new THREE.BufferGeometry().setFromPoints(orbitPoints);
-    const orbitMaterial = new THREE.LineBasicMaterial({ color: 0x888888, transparent: true, opacity: 0.5 });
+    const orbitMaterial = new THREE.LineBasicMaterial({ 
+        color: 0x888888,
+        transparent: true, 
+        opacity: 0.5,
+        depthTest: false
+    });
     const orbitLine = new THREE.Line(orbitGeometry, orbitMaterial);
     starSystemScene.add(orbitLine);
 
+    // Set initial position
+    const r = semiMajorAxis * (1 - eccentricity * eccentricity) / (1 + eccentricity * Math.cos(initialAngle));
+    planetMesh.position.x = r * Math.cos(initialAngle);
+    planetMesh.position.z = r * Math.sin(initialAngle);
+    
     starSystemScene.add(planetMesh);
     
-    // Create text label for the planet
+    // Add label
     const planetLabelDiv = document.createElement('div');
     planetLabelDiv.className = 'planet-label';
-    planetLabelDiv.textContent = planet.pl_name;
+    planetLabelDiv.textContent = `${planet.pl_name} (${planet.pl_type})`;
     planetLabelDiv.style.backgroundColor = 'transparent';
     planetLabelDiv.style.color = 'white';
     planetLabelDiv.style.padding = '2px';
     planetLabelDiv.style.fontSize = '12px';
     planetLabelDiv.style.cursor = 'pointer';
     planetLabelDiv.style.pointerEvents = 'auto';
+    planetLabelDiv.style.textShadow = '2px 2px 2px black';
     
     planetLabelDiv.addEventListener('click', (event) => {
         event.stopPropagation();
         removeSpectraDisplay();
+        displayPlanetInfo(planet);
         displayPlanetSpectra(planet.pl_name);
     });
 
     const planetLabel = new CSS2DObject(planetLabelDiv);
-    planetLabel.position.set(planetSize * 1.2, planetSize * 1.2, 0);
+    planetLabel.position.set(planetSize * 10, planetSize * 5, 0);
+    planetLabel.layers.set(0);
     planetMesh.add(planetLabel);
 
     planets.push({
@@ -292,6 +314,7 @@ function createPlanet(planet, index, starSize) {
         semiMajorAxis: semiMajorAxis,
         eccentricity: eccentricity,
         orbitSpeed: 0.00001 / Math.sqrt(semiMajorAxis),
+        initialAngle: initialAngle, // Store initial angle
         data: planet
     });
 
@@ -308,10 +331,54 @@ searchContainer.addEventListener('mouseleave', function() {
     isOverSearchContainer = false;
 });
 
+function displayPlanetInfo(planet) {
+    // Remove any existing atmosphere info first
+    const existingInfo = document.querySelector('.atmosphere-info');
+    if (existingInfo) {
+        existingInfo.remove();
+    }
+
+    if (planet.molecules && planet.molecules.length > 0) {
+        const moleculeDiv = document.createElement('div');
+        moleculeDiv.className = 'atmosphere-info';
+        moleculeDiv.style.cssText = `
+            position: fixed;
+            right: 420px;  // Position next to spectra display
+            top: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+            max-width: 300px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        `;
+
+        moleculeDiv.innerHTML = `
+            <h3 style="margin: 0 0 15px 0; color: #00ffff;">Atmospheric Composition</h3>
+            <h4 style="margin: 0 0 10px 0; color: #ffffff;">${planet.pl_name}</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                ${planet.molecules.map(molecule => 
+                    `<li style="margin: 8px 0; padding: 5px; background: rgba(255, 255, 255, 0.1); 
+                     border-radius: 4px;">${molecule}</li>`
+                ).join('')}
+            </ul>
+            <div style="margin-top: 15px; font-size: 0.9em; color: #aaaaaa;">
+                Data source: ${planet.dataSource}
+            </div>
+        `;
+
+        document.body.appendChild(moleculeDiv);
+    }
+}
+
 function onPlanetClick(event) {
     const planet = event.object.userData.planet;
     console.log(`Clicked on planet: ${planet.pl_name}`);
     removeSpectraDisplay();
+    displayPlanetInfo(planet);
     displayPlanetSpectra(planet.pl_name);
 }
 
@@ -704,7 +771,7 @@ function createStarGroup(starSystems) {
                 vDistance = (-mvPosition.z - cameraNear) / (cameraFar - cameraNear);
                 
                 float scale = 1.0 + vDistance * 150.0; // Increased scale factor
-                gl_PointSize = size * scale * (300.0 / -mvPosition.z);
+                gl_PointSize = size * scale * (500.0 / (-mvPosition.z + 5.0));
             }
         `,
         fragmentShader: `
@@ -715,7 +782,7 @@ function createStarGroup(starSystems) {
                 vec4 texColor = texture2D(pointTexture, gl_PointCoord);
                 
                 // Adjust brightness based on distance
-                float brightness = 1.0 + vDistance * 10.0; // Increased brightness factor
+                float brightness = 2.0 + vDistance * 10.0; // Increased brightness factor
                 brightness = clamp(brightness, 1.0, 20.0); // Increased maximum brightness
                 
                 gl_FragColor = vec4(vColor * brightness, 1.0) * texColor;
@@ -1189,7 +1256,7 @@ function updateExoplanetPage(index) {
 
     // Update UI elements
     if (exoplanetName) exoplanetName.innerText = "Star Name: " + name;
-    if (exoplanetName2) exoplanetName2.innerText = "Star Name: " + name;
+    if (starName) starName.innerText = "Star Name: " + name;
     if (exoplanetDist) {
         exoplanetDist.innerText = index === 0 ? "Currently Centered 0 Pc (0 Ly) from the Sun" : `Currently Centered ${system.sy_dist.toFixed(2)} Pc (${(system.sy_dist * 3.26156).toFixed(2)} Ly) from the Sun`;
     }
@@ -1202,6 +1269,15 @@ function updateExoplanetPage(index) {
         handleSunCase();
     } else {
         handleExoplanetCase(system, name);
+        if(system.st_spectype && system.st_mass) {
+            starType.innerText = "Stellar Type: " + system.st_spectype + "-Type Star " + "|" + " Stellar Mass: " + system.st_mass + " Solar Masses";
+        }
+        else if(system.st_spectype) {
+            starType.innerText = "Stellar Type: " + system.st_spectype + "-Type Star";
+        }
+        else if(system.st_mass) {
+            starType.innerText = "Stellar Mass: " + system.st_mass + " Solar Masses";
+        }
     }
 
     let centeredSystem = exoplanets[window.exoplanetState.selectedStarIndex];
@@ -1219,7 +1295,7 @@ function updateExoplanetPage(index) {
     }
 
     if (exoplanetName) exoplanetName.innerText = window.exoplanetState.selectedStar + "\u00a0" ;
-    if (exoplanetName2) exoplanetName2.innerText = "Star Name: " + window.exoplanetState.selectedStar;
+    if (starName) starName.innerText = "Star Name: " + window.exoplanetState.selectedStar;
 
     if (window.exoplanetState.selectedStarIndex !== 0 && Array.isArray(centeredSystem.planets) && exoplanetNames) {
         updatePlanetList(centeredSystem.planets);
@@ -1441,7 +1517,7 @@ function setupStarSystemScene(star) {
     return new Promise((resolve) => {
         try {
             starSystemScene = new THREE.Scene();
-            starSystemCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000);
+            starSystemCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 10000000);
             starSystemRenderer = new THREE.WebGLRenderer({ antialias: true });
             starSystemRenderer.setSize(window.innerWidth, window.innerHeight);
             starSystemRenderer.setClearColor(0x000000, 1);
@@ -1460,7 +1536,7 @@ function setupStarSystemScene(star) {
             starSystemControls.dampingFactor = 0.25;
             starSystemControls.enableZoom = true;
             starSystemControls.minDistance = 5;
-            starSystemControls.maxDistance = 1000;
+            starSystemControls.maxDistance = 1000000;
             starSystemControls.enablePan = true;
             starSystemControls.panSpeed = 1.0;
             starSystemControls.rotateSpeed = 1.0;
@@ -1504,7 +1580,7 @@ function setupStarSystemScene(star) {
                 console.log(`Creating ${star.planets.length} planets for ${star.hostname}`);
                 star.planets.forEach((planet, index) => {
                     console.log(`Creating planet ${index + 1}:`, JSON.stringify(planet, null, 2));
-                    const planetMesh = createPlanet(planet, index, starSize);
+                    const planetMesh = createPlanet(planet, index, starSize, star.planets.length);
                     if (planetMesh) {
                         planetMesh.userData.planet = planet;
                         addClickListenerToMesh(planetMesh);
@@ -1646,25 +1722,14 @@ function logStarSystemDetails(starName) {
 // Call this function to log details for HD 7924
 logStarSystemDetails('HD 7924');
 
-
-function getPlanetColor(planet) {
-    if (planet.pl_type === 'Gas Giant') return 0xFFA500;
-    if (planet.pl_type === 'Neptune-like') return 0x4169E1;
-    if (planet.pl_type === 'Super Earth') return 0x32CD32;
-    if (planet.pl_type === 'Terrestrial') return 0x8B4513;
-    return 0xC0C0C0;
-}
-
 function updateStarSystemScene() {
     if (!isInStarSystemView || !starSystemCamera || !planets) return;
-    
-    const cameraPosition = starSystemCamera.position;
     
     planets.forEach(planet => {
         if (!planet || !planet.mesh) return;
         
         const time = performance.now() * 0.0001;
-        const angle = time * planet.orbitSpeed;
+        const angle = (time * planet.orbitSpeed) + planet.initialAngle;  // Add initial angle
         
         const r = planet.semiMajorAxis * (1 - planet.eccentricity * planet.eccentricity) / 
                  (1 + planet.eccentricity * Math.cos(angle));
@@ -1674,11 +1739,7 @@ function updateStarSystemScene() {
         planet.mesh.position.set(x, 0, z);
         
         if (planet.label && planet.label.element) {
-            const distanceToCamera = cameraPosition.distanceTo(planet.mesh.position);
-            const fadeStart = 100;
-            const fadeEnd = 750;
-            const opacity = Math.max(0, Math.min(1, 1 - (distanceToCamera - fadeStart) / (fadeEnd - fadeStart)));
-            planet.label.element.style.opacity = opacity;
+            planet.label.element.style.opacity = 1;
         }
     });
 
@@ -1738,18 +1799,18 @@ function switchToStarSystemView(star, targetPlanet = null) {
 
                     const uiElements = [
                         exoplanetName, 
-                        exoplanetName2, 
+                        starName, 
                         exoplanetDist, 
                         exoplanetColor, 
                         exoplanetNames,
                         centerdist,
                         centerdistly,
-                        exoColor,
-                        centeredDis,
                         cdsLink,
                         simbad,
                         aladinLink,
                         ned,
+                        habcheck,
+                        starType
                     ];
                     
                     const fadeInTween = new Tween({ opacity: 0 })
@@ -1795,6 +1856,43 @@ function switchToStarSystemView(star, targetPlanet = null) {
 
     tweenGroup.add(fadeOutTween);
     fadeOutTween.start();
+}
+
+function getPlanetColor(planet) {
+    if (!planet || !planet.pl_type) return 0xC0C0C0; // Default silver color
+
+    switch (planet.pl_type) {
+        case 'Ultra-hot Jupiter':
+            return 0xFF0000; // Bright red
+        case 'Hot Jupiter':
+            return 0xFF4500; // Orange Red
+        case 'Super-Jovian':
+            return 0xFF6347; // Tomato
+        case 'Gas Giant':
+            return 0xFFA500; // Orange
+        case 'Mini-Neptune':
+            return 0x4169E1; // Royal Blue
+        case 'Sub-Neptune':
+            return 0x6495ED; // Cornflower Blue
+        case 'Habitable Super-Earth':
+            return 0x00FF00; // Bright Green
+        case 'Super-Earth':
+            return 0x32CD32; // Lime Green
+        case 'Habitable Earth-like':
+            return 0x00FF7F; // Spring Green
+        case 'Earth-like':
+            return 0x1E90FF; // Dodger Blue
+        case 'Sub-Earth':
+            return 0x87CEEB; // Sky Blue
+        case 'Ocean World':
+            return 0x00CED1; // Dark Turquoise
+        case 'Lava World':
+            return 0xFF6B6B; // Light Red
+        case 'Unknown':
+            return 0xC0C0C0; // Silver
+        default:
+            return 0xC0C0C0;
+    }
 }
 
 
@@ -1864,8 +1962,8 @@ function switchToGalaxyView() {
         selectedStarPosition = new THREE.Vector3(selectedStar.x, selectedStar.y, selectedStar.z);
     }
     
-    const distanceFromStar = 10;
-    const newCameraPosition = selectedStarPosition.clone().add(new THREE.Vector3(0, 0, distanceFromStar));
+    const distanceFromStar = 70;
+    const newCameraPosition = selectedStarPosition.clone().add(new THREE.Vector3(500, 0, distanceFromStar));
     camera.position.copy(newCameraPosition);
 
     // Fade to black

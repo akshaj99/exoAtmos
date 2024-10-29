@@ -50,7 +50,7 @@
                             border-radius: 5px;
                             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
                         }
-                        #exoplanetName2, #centeredDis {
+                        #starName, #centeredDis {
                             font-size: 24px;
                             margin-bottom: 10px;
                         }
@@ -72,7 +72,7 @@
                             padding: 10px;
                             border-radius: 5px;
                         }
-                        #habitable-zone-container label {
+                        #habitable-zone-container, #habCheck {
                             display: flex;
                             align-items: center;
                             cursor: pointer;
@@ -100,7 +100,8 @@
                         <button id="search-button">Search</button>
                 </div>
                 <div class="canHide" style="position: absolute; color: white; top: 0; left: 0;">
-                        <h1 id="exoplanetName2"></h1>
+                        <h1 id="starName"></h1>
+                        <p id="starType"></p>
                         <p id="exoplanetNames"></p>
                         <p style="margin-bottom: 1em;" id="exoplanetDist"></p>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/City_Lights_of_Asia_and_Middle_East_2016.png/640px-City_Lights_of_Asia_and_Middle_East_2016.jpg" width="200" id="image" style="display:none;"/>
@@ -112,7 +113,7 @@
                         <a href="" target="_blank" style="display:none;" id="ned">NED</a>
                 </div>
                 <div id="habitable-zone-container" style="position: absolute; bottom: 50px; left: 10px; display: none; color:aqua">
-                        <label>
+                        <label id="habcheck">
                         <input type="checkbox" id="habitable-zone-checkbox" checked>
                         Show Habitable Zone
                         </label>
